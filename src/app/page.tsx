@@ -38,7 +38,7 @@ export default function Home() {
           className="-top-40 right-0 md:right-10 md:-top-20"
           fill="cyan"
         />
-        <div className=" p-5 max-w-7xl  mx-auto relative w-full pt-20 md:pt-20">
+        <div className=" p-5 max-w-7xl  mx-auto relative w-full pt-0 md:pt-20">
           <div className="h-[40rem] w-full bg-black flex flex-col items-center justify-center rounded-md">
             <h1 className="md:text-7xl text-3xl lg:text-7xl font-light text-center  bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 relative z-20">
               Hello, everyone
@@ -46,7 +46,7 @@ export default function Home() {
             <h1 className="md:text-7xl mt-2 text-3xl lg:text-7xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 relative z-20">
               it's me alul.
             </h1>
-            <div className="w-[40rem] h-40 -mt-[90px] relative">
+            <div className="w-[40rem] h-40 md:-mt-[90px] -mt-[50px] relative">
               {/* Gradients */}
               <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-3/4 blur-sm" />
               <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px w-3/4" />
@@ -67,8 +67,8 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="flex flex-row">
-        <div className="w-1/2 h-[40rem]">
+      <div className="flex flex-col md:flex-row">
+        <div className="w-full md:w-1/2 h-full md:h-[40rem]">
           <CardContainer className="inter-var">
             <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
               <CardItem
@@ -120,9 +120,9 @@ export default function Home() {
             </CardBody>
           </CardContainer>
         </div>
-        <div className="w-1/2 h-[40rem]">
+        <div className="w-full md:w-1/2 h-full md:h-[40rem] px-5 md:px-0">
           <div className="h-[40rem] flex flex-col text-left justify-start my-20 items-start px-4 space-y-4">
-            <div className="text-6xl mr-auto font-normal text-neutral-600 dark:text-neutral-400">
+            <div className="text-5xl md:text-6xl mr-auto font-normal text-neutral-600 dark:text-neutral-400">
               <span className="bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 relative z-20">
                 let’s Introduce
               </span>{" "}
@@ -130,7 +130,7 @@ export default function Home() {
               <FlipWords words={words} /> <br />
             </div>
 
-            <p className="tracking-wides mb-5">
+            <p className="tracking-wides text-md lg:!text-md mb-5">
               Hello, I'm Muhammad Fadlullah Assalafy Yulandara, known as Luull.
               I am a third-semester student with a vocational background in
               software engineering, specializing in web and mobile development.
@@ -155,7 +155,7 @@ export default function Home() {
         </div>
       </div>
 
-      <BentoGrid className="max-w-4xl my-20 mx-auto">
+      <BentoGrid className="max-w-4xl my-20 mx-10 md:mx-auto">
         {CardLayout.map((item, i) => (
           <BentoGridItem
             key={i}
