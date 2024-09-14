@@ -3,6 +3,7 @@
 "use client";
 import {
   BackgroundLines,
+  Badge,
   BentoGrid,
   BentoGridItem,
   CanvasRevealEffect,
@@ -13,6 +14,7 @@ import {
   FlipWords,
   FloatingDock,
   LampContainer,
+  MacbookScroll,
   Skeleton,
   SparklesCore,
   Spotlight,
@@ -39,6 +41,7 @@ import {
   IconDeviceMobile,
   IconEyeCode,
 } from "@tabler/icons-react";
+import Link from "next/link";
 export default function Home() {
   const words = ["me", "luull", "alul"];
   return (
@@ -173,62 +176,84 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="text-5xl text-center md:text-4xl mr-auto font-normal text-neutral-600 dark:text-neutral-400">
-        <span className="bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 relative z-20">
-          Cross-Platform Developer
-        </span>
-      </div>
-      <div className="py-20 flex flex-col lg:flex-row items-center justify-center bg-white dark:bg-black w-full gap-4 mx-auto px-8">
-        <Card
-          title="Mobile Developer"
-          icon={<IconDeviceMobile className="h-40 w-40" />}
-          iconStack={[
-            <IconBrandReact key="react" />,
-            <IconBrandFlutter key="figma" />,
-          ]}
-        >
-          <CanvasRevealEffect
-            animationSpeed={5.1}
-            containerClassName="bg-emerald-900"
-          />
-        </Card>
-        <Card
-          title="Web Developer"
-          icon={<IconDeviceLaptop className="h-40 w-40" />}
-          iconStack={[
-            <IconBrandNextjs key="react" />,
-            <IconBrandReact key="react" />,
-            <IconBrandLaravel key="figma" />,
-          ]}
-        >
-          <CanvasRevealEffect
-            animationSpeed={3}
-            containerClassName="bg-black"
-            colors={[
-              [236, 72, 153],
-              [232, 121, 249],
+      <div className="h-[40rem]">
+        <div className="text-5xl text-center md:text-4xl mr-auto font-normal text-neutral-600 dark:text-neutral-400">
+          <span className="bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 relative z-20">
+            Cross-Platform Developer
+          </span>
+        </div>
+        <div className="py-20 flex flex-col lg:flex-row items-center justify-center bg-white dark:bg-black w-full gap-4 mx-auto px-8">
+          <Card
+            title="Mobile Developer"
+            icon={<IconDeviceMobile className="h-40 w-40" />}
+            iconStack={[
+              <IconBrandReact key="react" />,
+              <IconBrandFlutter key="figma" />,
             ]}
-            dotSize={2}
-          />
-          {/* Radial gradient for the cute fade */}
-          <div className="absolute inset-0 [mask-image:radial-gradient(400px_at_center,white,transparent)] bg-black/50 dark:bg-black/90" />
-        </Card>
-        <Card
-          title="UI/UX Designer"
-          icon={<IconBrandFigma className="h-40 w-40" />}
-          iconStack={[
-            <IconBrandFigma key="figma" />,
-            <IconBrandAdobePhotoshop key="react" />,
-            <IconBrandAdobeXd key="react" />,
-            <IconBrandAdobeIllustrator key="react" />,
-          ]}
-        >
-          <CanvasRevealEffect
-            animationSpeed={3}
-            containerClassName="bg-sky-600"
-            colors={[[125, 211, 252]]}
-          />
-        </Card>
+          >
+            <CanvasRevealEffect
+              animationSpeed={5.1}
+              containerClassName="bg-emerald-900"
+            />
+          </Card>
+          <Card
+            title="Web Developer"
+            icon={<IconDeviceLaptop className="h-40 w-40" />}
+            iconStack={[
+              <IconBrandNextjs key="react" />,
+              <IconBrandReact key="react" />,
+              <IconBrandLaravel key="figma" />,
+            ]}
+          >
+            <CanvasRevealEffect
+              animationSpeed={3}
+              containerClassName="bg-black"
+              colors={[
+                [236, 72, 153],
+                [232, 121, 249],
+              ]}
+              dotSize={2}
+            />
+            {/* Radial gradient for the cute fade */}
+            <div className="absolute inset-0 [mask-image:radial-gradient(400px_at_center,white,transparent)] bg-black/50 dark:bg-black/90" />
+          </Card>
+          <Card
+            title="UI/UX Designer"
+            icon={<IconBrandFigma className="h-40 w-40" />}
+            iconStack={[
+              <IconBrandFigma key="figma" />,
+              <IconBrandAdobePhotoshop key="react" />,
+              <IconBrandAdobeXd key="react" />,
+              <IconBrandAdobeIllustrator key="react" />,
+            ]}
+          >
+            <CanvasRevealEffect
+              animationSpeed={3}
+              containerClassName="bg-sky-600"
+              colors={[[125, 211, 252]]}
+            />
+          </Card>
+        </div>
+      </div>
+
+      <div className="-mt-[200px] overflow-hidden dark:bg-[#0B0B0F] bg-white w-full">
+        <MacbookScroll
+          title={
+            <span className="text-3xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
+              My Big Project <br />{" "}
+              <span className="font-light text-[20px]">
+                Cash Management Platform from BRI
+              </span>
+            </span>
+          }
+          badge={
+            <Link href="https://peerlist.io/manuarora">
+              <Badge className="h-10 w-10 transform -rotate-12" />
+            </Link>
+          }
+          src={`./images/display.png`}
+          showGradient={false}
+        />
       </div>
 
       <BentoGrid className="max-w-4xl my-20 mx-10 md:mx-auto">
