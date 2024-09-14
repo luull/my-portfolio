@@ -2,7 +2,6 @@
 /* eslint-disable react/no-unescaped-entities */
 "use client";
 import {
-  BackgroundLines,
   Badge,
   BentoGrid,
   BentoGridItem,
@@ -12,35 +11,26 @@ import {
   CardContainer,
   CardItem,
   FlipWords,
-  FloatingDock,
-  LampContainer,
   MacbookScroll,
-  Skeleton,
   SparklesCore,
   Spotlight,
 } from "@/components";
-import { motion } from "framer-motion";
 import { Navbar } from "@/components/navbar";
 
-import Image from "next/image";
-import { CardLayout, TechStack } from "@/const";
+import { CardLayout } from "@/const";
 import {
-  Icon360,
-  Icon3dRotate,
-  IconAB,
   IconBrandAdobeIllustrator,
   IconBrandAdobePhotoshop,
   IconBrandAdobeXd,
   IconBrandFigma,
   IconBrandFlutter,
-  IconBrandJavascript,
   IconBrandLaravel,
   IconBrandNextjs,
   IconBrandReact,
   IconDeviceLaptop,
   IconDeviceMobile,
-  IconEyeCode,
 } from "@tabler/icons-react";
+import Image from "next/image";
 import Link from "next/link";
 export default function Home() {
   const words = ["me", "luull", "alul"];
@@ -177,7 +167,7 @@ export default function Home() {
         </div>
       </div>
 
-      <BackgroundLines className="h-[40rem]">
+      <div className="h-[40rem]">
         <div className="text-5xl text-center md:text-4xl mr-auto font-normal text-neutral-600 dark:text-neutral-400">
           <span className="bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 relative z-20">
             Cross-Platform Developer
@@ -235,7 +225,7 @@ export default function Home() {
             />
           </Card>
         </div>
-      </BackgroundLines>
+      </div>
 
       <div className="-mt-0 md:-mt-[200px] overflow-hidden dark:bg-black bg-white w-full">
         <MacbookScroll
