@@ -113,7 +113,7 @@ export default function Home() {
                 className="w-full mt-4"
               >
                 <Image
-                  src={"./images/me.jpg"}
+                  src={`./images/me.jpg`}
                   height="1000"
                   width="1000"
                   className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
@@ -167,16 +167,17 @@ export default function Home() {
               where I can continue to hone my skills and contribute to
               innovative projects.
             </p>
-            <div className="mt-5">
+            {/* <div className="mt-5">
               <FloatingDock
                 mobileClassName="translate-y-20" // only for demo, remove for production
                 items={TechStack}
               />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
-      <div className="h-[40rem]">
+
+      <BackgroundLines className="h-[40rem]">
         <div className="text-5xl text-center md:text-4xl mr-auto font-normal text-neutral-600 dark:text-neutral-400">
           <span className="bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 relative z-20">
             Cross-Platform Developer
@@ -234,15 +235,32 @@ export default function Home() {
             />
           </Card>
         </div>
-      </div>
+      </BackgroundLines>
 
-      <div className="-mt-0 md:-mt-[200px] overflow-hidden dark:bg-[#0B0B0F] bg-white w-full">
+      <div className="-mt-0 md:-mt-[200px] overflow-hidden dark:bg-black bg-white w-full">
         <MacbookScroll
           title={
-            <span className="text-3xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
-              My Big Project <br />{" "}
-              <span className="font-light text-[20px]">
-                Cash Management Platform from BRI
+            <span className="text-5xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
+              My Project <br />{" "}
+              <span className="font-light text-[25px]">
+                Corporate Cash Management Platform
+                <div className="w-[40rem] h-2  relative">
+                  {/* Gradients */}
+                  <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-3/4 blur-sm" />
+                  <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px w-3/4" />
+                  <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-[5px] w-1/4 blur-sm" />
+                  <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px w-1/4" />
+                </div>
+                <span className="font-light flex items-center justify-center">
+                  <Image
+                    src={`./images/logobri.png`}
+                    width={25}
+                    height={25}
+                    alt="logo"
+                    className="mr-1" // Menambahkan jarak antara logo dan teks
+                  />
+                  <span className=" dark:text-white text-black">BRI</span>
+                </span>
               </span>
             </span>
           }
@@ -264,7 +282,7 @@ export default function Home() {
             description={item.description}
             header={item.header}
             icon={item.icon}
-            className={i === 3 || i === 6 ? "md:col-span-2" : ""}
+            // className={i === 3 || i === 6 ? "md:col-span-2" : ""}
           />
         ))}
       </BentoGrid>
