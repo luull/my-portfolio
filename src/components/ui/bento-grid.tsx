@@ -46,7 +46,8 @@ export const BentoGridItem = ({
         alt={"-"}
         width={120}
         height={200}
-        className="w-full h-[140px]"
+        unoptimized
+        className="w-full h-[140px] grayscale hover:grayscale-0 transition-all duration-300"
       />
 
       <div className="group-hover/bento:translate-x-2 transition duration-200">
