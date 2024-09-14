@@ -5,6 +5,8 @@ import {
   BackgroundLines,
   BentoGrid,
   BentoGridItem,
+  CanvasRevealEffect,
+  Card,
   CardBody,
   CardContainer,
   CardItem,
@@ -20,6 +22,23 @@ import { Navbar } from "@/components/navbar";
 
 import Image from "next/image";
 import { CardLayout, TechStack } from "@/const";
+import {
+  Icon360,
+  Icon3dRotate,
+  IconAB,
+  IconBrandAdobeIllustrator,
+  IconBrandAdobePhotoshop,
+  IconBrandAdobeXd,
+  IconBrandFigma,
+  IconBrandFlutter,
+  IconBrandJavascript,
+  IconBrandLaravel,
+  IconBrandNextjs,
+  IconBrandReact,
+  IconDeviceLaptop,
+  IconDeviceMobile,
+  IconEyeCode,
+} from "@tabler/icons-react";
 export default function Home() {
   const words = ["me", "luull", "alul"];
   return (
@@ -67,7 +86,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col md:flex-row">
+      <div className="flex flex-col md:flex-row bg-black dark:bg-black ">
         <div className="w-full md:w-1/2 h-full md:h-[40rem]">
           <CardContainer className="inter-var">
             <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
@@ -153,6 +172,63 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </div>
+      <div className="text-5xl text-center md:text-4xl mr-auto font-normal text-neutral-600 dark:text-neutral-400">
+        <span className="bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 relative z-20">
+          Cross-Platform Developer
+        </span>
+      </div>
+      <div className="py-20 flex flex-col lg:flex-row items-center justify-center bg-white dark:bg-black w-full gap-4 mx-auto px-8">
+        <Card
+          title="Mobile Developer"
+          icon={<IconDeviceMobile className="h-40 w-40" />}
+          iconStack={[
+            <IconBrandReact key="react" />,
+            <IconBrandFlutter key="figma" />,
+          ]}
+        >
+          <CanvasRevealEffect
+            animationSpeed={5.1}
+            containerClassName="bg-emerald-900"
+          />
+        </Card>
+        <Card
+          title="Web Developer"
+          icon={<IconDeviceLaptop className="h-40 w-40" />}
+          iconStack={[
+            <IconBrandNextjs key="react" />,
+            <IconBrandReact key="react" />,
+            <IconBrandLaravel key="figma" />,
+          ]}
+        >
+          <CanvasRevealEffect
+            animationSpeed={3}
+            containerClassName="bg-black"
+            colors={[
+              [236, 72, 153],
+              [232, 121, 249],
+            ]}
+            dotSize={2}
+          />
+          {/* Radial gradient for the cute fade */}
+          <div className="absolute inset-0 [mask-image:radial-gradient(400px_at_center,white,transparent)] bg-black/50 dark:bg-black/90" />
+        </Card>
+        <Card
+          title="UI/UX Designer"
+          icon={<IconBrandFigma className="h-40 w-40" />}
+          iconStack={[
+            <IconBrandFigma key="figma" />,
+            <IconBrandAdobePhotoshop key="react" />,
+            <IconBrandAdobeXd key="react" />,
+            <IconBrandAdobeIllustrator key="react" />,
+          ]}
+        >
+          <CanvasRevealEffect
+            animationSpeed={3}
+            containerClassName="bg-sky-600"
+            colors={[[125, 211, 252]]}
+          />
+        </Card>
       </div>
 
       <BentoGrid className="max-w-4xl my-20 mx-10 md:mx-auto">

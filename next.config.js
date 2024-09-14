@@ -2,7 +2,7 @@
 module.exports = {
     images: {
         // domains: ['images.unsplash.com'],
-        // domains: ['assets.aceternity.com'],
+        domains: ['w3.org'],
     },
   }
   

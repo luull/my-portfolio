@@ -6,5 +6,6 @@ export { FlipWords } from "./ui/flip-text";
 export { BackgroundLines } from "./ui/background-lines";
 export { LampContainer } from "./ui/lamp";
 export { FloatingDock } from "./ui/floating-dock";
+export { CanvasRevealEffect, Card } from "./ui/canvas-effect";
 export { CardContainer, CardBody, CardItem } from "./ui/photo-card";
 export { BentoGrid, BentoGridItem } from "./ui/bento-grid";
