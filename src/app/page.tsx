@@ -113,7 +113,7 @@ export default function Home() {
                 className="w-full mt-4"
               >
                 <Image
-                  src={"./images/me.jpg"}
+                  src={"/images/me.jpg"}
                   height="1000"
                   width="1000"
                   className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
@@ -185,7 +185,7 @@ export default function Home() {
         <div className="py-20 flex flex-col lg:flex-row items-center justify-center bg-white dark:bg-black w-full gap-4 mx-auto px-8">
           <Card
             title="Mobile Developer"
-            icon={<IconDeviceMobile className="h-40 w-40" />}
+            icon={<IconDeviceMobile className="h-20 w-20 md:h-40 md:w-40" />}
             iconStack={[
               <IconBrandReact key="react" />,
               <IconBrandFlutter key="figma" />,
@@ -198,7 +198,7 @@ export default function Home() {
           </Card>
           <Card
             title="Web Developer"
-            icon={<IconDeviceLaptop className="h-40 w-40" />}
+            icon={<IconDeviceLaptop className="h-20 w-20 md:h-40 md:w-40" />}
             iconStack={[
               <IconBrandNextjs key="react" />,
               <IconBrandReact key="react" />,
@@ -219,7 +219,7 @@ export default function Home() {
           </Card>
           <Card
             title="UI/UX Designer"
-            icon={<IconBrandFigma className="h-40 w-40" />}
+            icon={<IconBrandFigma className="h-20 w-20 md:h-40 md:w-40" />}
             iconStack={[
               <IconBrandFigma key="figma" />,
               <IconBrandAdobePhotoshop key="react" />,
@@ -236,7 +236,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="-mt-[200px] overflow-hidden dark:bg-[#0B0B0F] bg-white w-full">
+      <div className="-mt-0 md:-mt-[200px] overflow-hidden dark:bg-[#0B0B0F] bg-white w-full">
         <MacbookScroll
           title={
             <span className="text-3xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
@@ -251,7 +251,7 @@ export default function Home() {
               <Badge className="h-10 w-10 transform -rotate-12" />
             </Link>
           }
-          src={`./images/display.png`}
+          src={`/images/display.png`}
           showGradient={false}
         />
       </div>
