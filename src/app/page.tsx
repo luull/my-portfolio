@@ -35,9 +35,9 @@ import Link from "next/link";
 export default function Home() {
   const words = ["me", "luull", "alul"];
   return (
-    <div className="relative w-full">
+    <div className="relative bg-black w-full pb-10">
       <Navbar />
-      <div className="h-[35rem] w-full rounded-md flex md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden">
+      <div className="h-[35rem] w-full flex md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden">
         <Spotlight
           className="-top-40 left-0 md:left-60 md:-top-30"
           fill="blue"
@@ -50,8 +50,8 @@ export default function Home() {
           className="-top-40 right-0 md:right-10 md:-top-20"
           fill="cyan"
         />
-        <div className=" p-5 max-w-7xl  mx-auto relative w-full pt-0 md:pt-20">
-          <div className="h-[40rem] w-full bg-black flex flex-col items-center justify-center rounded-md">
+        <div className=" p-5 max-w-7xl bg-black  mx-auto relative w-full pt-0 md:pt-20">
+          <div className="h-[40rem] w-full flex flex-col items-center justify-center">
             <h1 className="md:text-7xl text-3xl lg:text-7xl font-light text-center  bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 relative z-20">
               Hello, everyone
             </h1>
@@ -82,17 +82,17 @@ export default function Home() {
       <div className="flex flex-col md:flex-row bg-black dark:bg-black ">
         <div className="w-full md:w-1/2 h-full md:h-[40rem]">
           <CardContainer className="inter-var">
-            <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
+            <CardBody className="bg-black relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-white/[0.2] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
               <CardItem
                 translateZ="50"
-                className="text-xl font-bold text-neutral-600 dark:text-white"
+                className="text-xl font-bold text-white dark:text-white"
               >
                 Front End Developer
               </CardItem>
               <CardItem
                 as="p"
                 translateZ="60"
-                className="text-neutral-500 text-sm tracking-wides max-w-sm mt-2 dark:text-neutral-300"
+                className="text-neutral-300 text-sm tracking-wides max-w-sm mt-2 dark:text-neutral-300"
               >
                 "the <b>EARTH</b> without <b>ART</b> is just <b>EH</b>"
               </CardItem>
@@ -116,7 +116,7 @@ export default function Home() {
                   translateZ={20}
                   translateX={-40}
                   as="button"
-                  className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
+                  className="px-4 py-2 rounded-xl text-xs font-normal text-white dark:text-white"
                 >
                   Hire now →
                 </CardItem>
@@ -124,7 +124,7 @@ export default function Home() {
                   translateZ={20}
                   translateX={40}
                   as="button"
-                  className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
+                  className="px-4 py-2 rounded-xl bg-white dark:text-black text-black text-xs font-bold"
                 >
                   Contact me
                 </CardItem>
@@ -134,7 +134,7 @@ export default function Home() {
         </div>
         <div className="w-full md:w-1/2 h-full md:h-[40rem] px-5 md:px-0">
           <div className="h-[40rem] flex flex-col text-left justify-start my-20 items-start px-4 space-y-4">
-            <div className="text-5xl md:text-6xl mr-auto font-normal text-neutral-600 dark:text-neutral-400">
+            <div className="text-5xl md:text-6xl mr-auto font-normal text-neutral-400 dark:text-neutral-400">
               <span className="bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 relative z-20">
                 let’s Introduce
               </span>{" "}
@@ -142,7 +142,7 @@ export default function Home() {
               <FlipWords words={words} /> <br />
             </div>
 
-            <p className="tracking-wides text-md lg:!text-md mb-5">
+            <p className="tracking-wides text-white text-md lg:!text-md mb-5">
               Hello, I'm Muhammad Fadlullah Assalafy Yulandara, known as Luull.
               I am a third-semester student with a vocational background in
               software engineering, specializing in web and mobile development.
@@ -167,13 +167,13 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="h-[40rem]">
-        <div className="text-5xl text-center md:text-4xl mr-auto font-normal text-neutral-600 dark:text-neutral-400">
+      <div className="h-[40rem] text-white bg-black dark:bg-black">
+        <div className="text-5xl text-center md:text-4xl mr-auto font-normal text-neutral-400 dark:text-neutral-400">
           <span className="bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 relative z-20">
             Cross-Platform Developer
           </span>
         </div>
-        <div className="py-20 flex flex-col lg:flex-row items-center justify-center bg-white dark:bg-black w-full gap-4 mx-auto px-8">
+        <div className="py-20 flex flex-col lg:flex-row items-center justify-center bg-black dark:bg-black w-full gap-4 mx-auto px-8">
           <Card
             title="Mobile Developer"
             icon={<IconDeviceMobile className="h-20 w-20 md:h-40 md:w-40" />}
@@ -206,7 +206,7 @@ export default function Home() {
               dotSize={2}
             />
             {/* Radial gradient for the cute fade */}
-            <div className="absolute inset-0 [mask-image:radial-gradient(400px_at_center,white,transparent)] bg-black/50 dark:bg-black/90" />
+            <div className="absolute inset-0 [mask-image:radial-gradient(400px_at_center,white,transparent)] bg-black/90 dark:bg-black/90" />
           </Card>
           <Card
             title="UI/UX Designer"
@@ -227,7 +227,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="-mt-0 md:-mt-[200px] overflow-hidden dark:bg-black bg-white w-full">
+      <div className="-mt-0 md:-mt-[200px] overflow-hidden dark:bg-black bg-black w-full">
         <MacbookScroll
           title={
             <span className="text-5xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
@@ -249,7 +249,7 @@ export default function Home() {
                     alt="logo"
                     className="mr-1" // Menambahkan jarak antara logo dan teks
                   />
-                  <span className=" dark:text-white text-black">BRI</span>
+                  <span className=" dark:text-white text-white">BRI</span>
                 </span>
               </span>
             </span>
@@ -264,7 +264,7 @@ export default function Home() {
         />
       </div>
 
-      <BentoGrid className="max-w-4xl my-20 mx-10 md:mx-auto">
+      <BentoGrid className="max-w-4xl bg-black dark:bg-black mx-10 md:mx-auto">
         {CardLayout.map((item, i) => (
           <BentoGridItem
             key={i}
