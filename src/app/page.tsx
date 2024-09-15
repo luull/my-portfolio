@@ -103,7 +103,7 @@ export default function Home() {
                 className="w-full mt-4"
               >
                 <Image
-                  src={`./images/me.jpg`}
+                  src={`/images/me.jpg`}
                   height="1000"
                   width="1000"
                   className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
@@ -243,7 +243,7 @@ export default function Home() {
                 </div>
                 <span className="font-light flex items-center justify-center">
                   <Image
-                    src={`./images/logobri.png`}
+                    src={`/images/logobri.png`}
                     width={25}
                     height={25}
                     alt="logo"
@@ -259,7 +259,7 @@ export default function Home() {
               <Badge className="h-10 w-10 transform -rotate-12" />
             </Link>
           }
-          src={`./images/display.png`}
+          src={`/images/display.png`}
           showGradient={false}
         />
       </div>
